@@ -22,7 +22,6 @@ const routes: Routes = [
   {path:'categories' , component:CategoriesComponent},
   {path:'wishlist' , component:WishlistComponent},
   {path:'cart' , component:CartComponent},
-
   {path:'register', component:RegisterComponent}
 ];
 

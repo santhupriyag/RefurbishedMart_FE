@@ -4,7 +4,7 @@
     <div class="container-fluid" >
          <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
              <div class="col-md-2">
-                 <img  class="d-none d-md-flex" routerLink="home"  src="assets/images/lat.png" width="100">
+                 <img  class="d-none d-md-flex" routerLink="home"  width="150" height="100" src="assets/images/lat.png" >
              </div>
          
              
@@ -86,17 +86,17 @@
 
       
       <li class="nav-item dropdown">
-        <!-- <div class="dropdown">
+        <div class="dropdown">
           <button type="button" class="btn info dropdown-toggle" data-bs-toggle="dropdown" style="font-weight:bold;color: black;margin-left: 686px;"
-          *ngIf="!userloginService.isUserLoggedIn() && !retailerloginservice.isRetailerLoggedIn() && !adminloginservice.isAdminLoggedIn()" >Login
+           >Login
           </button>
           <ul class="dropdown-menu" style="margin-left: 686px;">
-            <a class="dropdown-item" routerLink="userLogin">User Login</a>
+            <a class="dropdown-item" routerLink="login">User Login</a>
  
-            <a class="dropdown-item" routerLink="retailerLogin">Retailer Login</a>
+            <a class="dropdown-item" routerLink="adminlogin">Admin Login</a>
 
           </ul>
-        </div> -->
+        </div>
       </li>
 
     </ul>
