@@ -1,0 +1,9 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 1000px !important;
+    }
+    }
+
+    /* .wholeheight{
+        height: min-content;
+    } */

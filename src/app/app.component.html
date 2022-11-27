@@ -1,10 +1,9 @@
-<div class="wholebody" >
- 
-<section class="header-main border-bottom bg-white">
+
+  <section class="header-main border-bottom bg-white">
     <div class="container-fluid" >
          <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
              <div class="col-md-2">
-                 <img  class="d-none d-md-flex" routerLink="home"  width="150" height="100" src="assets/images/lat.png" >
+                 <img  class="d-none d-md-flex" routerLink="home"  src="assets/images/lat.png" width="100">
              </div>
          
              
@@ -22,34 +21,31 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto">
       <li class="nav-item active">
-
-        <!-- some commented code will be reuse for button in various components like user dashboard and admin dashboard -->
-
-        <!-- <a  *ngIf="!userloginService.isUserLoggedIn()" class="nav-link" href="#" style="font-weight:bold;color: rgb(1, 1, 1);"routerLink="home" class="clickme info" routerLinkActive="active">Home</a> -->
+        <a  *ngIf="!userloginService.isUserLoggedIn()" class="nav-link" href="#" style="font-weight:bold;color: rgb(1, 1, 1);"routerLink="home" class="clickme info" routerLinkActive="active">Home</a>
       </li>
  
 
       <li class="nav-item">
-        <!-- <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()"  style="margin-left: 1px;" class="clickme  bg-primary" routerLinkActive="active">My Profile</a> -->
+        <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()"  style="margin-left: 1px;" class="clickme  bg-primary" routerLinkActive="active">My Profile</a>
       </li>
+
+      <!-- <li class="nav-item">
+        <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="addproducts" class="clickme bg-primary" routerLinkActive="active" style="margin-left: 15px;">Add Product</a>
+      </li> -->
+
+      <!-- <li class="nav-item">
+        <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="productlist" class="clickme  bg-primary" routerLinkActive="active" style="margin-left: 15px;">Product List</a>
+      </li> -->
+
+      <!-- <li class="nav-item">
+        <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="retailerslist" class="clickme  bg-primary" routerLinkActive="active" style="margin-left: 15px;">Retailers List</a>
+      </li> -->
 
       <li class="nav-item">
-        <!-- <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="addproducts" class="clickme bg-primary" routerLinkActive="active" style="margin-left: 15px;">Add Product</a> -->
+        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="wishlist" style="margin-left:14px ;"    class="clickme  bg-primary" routerLinkActive="active">Wishlist</a>
       </li>
 
-      <li class="nav-item">
-        <!-- <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="productlist" class="clickme  bg-primary" routerLinkActive="active" style="margin-left: 15px;">Product List</a> -->
-      </li>
-
-      <li class="nav-item">
-        <!-- <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="retailerslist" class="clickme  bg-primary" routerLinkActive="active" style="margin-left: 15px;">Retailers List</a> -->
-      </li>
-
-      <li class="nav-item">
-        <!-- <a *ngIf="userloginService.isUserLoggedIn()" routerLink="compare" style="margin-left:14px ;"    class="clickme  bg-primary" routerLinkActive="active">Wishlist</a> -->
-      </li>
-
-      <!-- <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <div class="dropdown">
         <button type="button" class="btn info dropdown-toggle" data-bs-toggle="dropdown" style="font-weight:bold;color: black;margin-left:29px"
           *ngIf="userloginService.isUserLoggedIn()" >Category
@@ -63,32 +59,32 @@
           <a class="dropdown-item" href="#" routerLink="clothes">Clothes</a>
           </ul>
         </div>
-      </li> -->
+      </li>
 
       <li class="nav-item">
-        <!-- <a *ngIf="userloginService.isUserLoggedIn()" routerLink="listproducts" style="margin-left:15px ;"    class="clickme  bg-primary" routerLinkActive="active">All Products</a> -->
+        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="listproducts" style="margin-left:15px ;"    class="clickme  bg-primary" routerLinkActive="active">All Products</a>
       </li>
      
-        <!-- <a *ngIf="userloginService.isUserLoggedIn()" routerLink="cart" class="fa fa-shopping-cart" style="font-size:24px; margin-left:570px" routerLinkActive="active"></a> -->
+        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="cart" class="fa fa-shopping-cart" style="font-size:24px; margin-left:570px" routerLinkActive="active"></a>
    
 
       <li class="nav-item">
-        <!-- <a *ngIf="userloginService.isUserLoggedIn()"  style="margin-left:41px ;"  routerLink="userLogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a> -->
+        <a *ngIf="userloginService.isUserLoggedIn()"  style="margin-left:41px ;"  routerLink="logout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a>
       </li>
 
-      <li class="nav-item">
-        <!-- <a *ngIf="retailerloginservice.isRetailerLoggedIn()"  style="margin-left:553px ;"  routerLink="retailerlogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a> -->
-      </li>
+      <!-- <li class="nav-item">
+        <a *ngIf="retailerloginservice.isRetailerLoggedIn()"  style="margin-left:553px ;"  routerLink="retailerlogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a>
+      </li> -->
 
       <li class="nav-item">
-        <!-- <a *ngIf="adminloginservice.isAdminLoggedIn()"  style="margin-left:553px ;" routerLink="adminlogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a> -->
+        <a *ngIf="adminloginservice.isAdminLoggedIn()"  style="margin-left:553px ;" routerLink="adminlogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a>
       </li>
 
       
       <li class="nav-item dropdown">
         <div class="dropdown">
           <button type="button" class="btn info dropdown-toggle" data-bs-toggle="dropdown" style="font-weight:bold;color: black;margin-left: 686px;"
-           >Login
+          *ngIf="!userloginService.isUserLoggedIn() && !adminloginservice.isAdminLoggedIn() " >Login
           </button>
           <ul class="dropdown-menu" style="margin-left: 686px;">
             <a class="dropdown-item" routerLink="login">User Login</a>
@@ -105,18 +101,19 @@
 </nav>
 
 
-<!-- main section  -->
-<!-- Center contant
- -->
+<div class="container">
+  <br>
 
+  <div class="card">
 
-<div class="heightchange" ></div>
-<router-outlet></router-outlet>
-
-
-
-
-<!-- footer section  -->
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div class="container" style="height: 100px;">
+  
+</div>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <footer class="footer_area section_padding_130_0">
@@ -188,5 +185,3 @@
         </div>
       </div>
     </footer>
-
-</div>

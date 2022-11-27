@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 // import { NotificationService } from '../services/notification.service';
 import { User } from '../model/User';
 import { Response } from '../model/response';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-admin-register',
+  templateUrl: './admin-register.component.html',
+  styleUrls: ['./admin-register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class AdminRegisterComponent implements OnInit {
 
   registerForm: FormGroup | any;
   submitted = false;
   response:any = new Response();
 
   constructor(
-    private formBuilder: FormBuilder, private userservice: UserService,
+    private formBuilder: FormBuilder, private adminservice: AdminService,
     private router: Router,private toastr: ToastrService
   ) { }
 
@@ -75,14 +75,13 @@ export class RegisterComponent implements OnInit {
       }
 
     }
-    this.userservice.saveUser(user)
+    this.adminservice.saveAdmin(user)
       .subscribe((res:any) => {
         if('errorMessage' in res){
           this.toastr.error('', res.errorMessage);
          // this.router.navigate(['/login']);
         }
         else if('message' in res){
-          alert(res.message)
           this.toastr.success('', res.message);
          // this.router.navigate(['/login']);
         }

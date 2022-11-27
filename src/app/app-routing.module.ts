@@ -10,19 +10,24 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-
+import{LogoutComponent} from './components/logout/logout.component'
+import{AdminRegisterComponent} from './components/admin-register/admin-register.component'
+import{AdminlogoutComponent} from './components/adminlogout/adminlogout.component'
 const routes: Routes = [
   {path:'' , pathMatch:"full" , redirectTo:'home'},
   {path:'home' , component:HomeComponent},
   {path:'login' , component:LoginComponent },
+  {path:'logout' , component:LogoutComponent },
   {path:'adminlogin' , component:AdminloginComponent},
   {path:'adminpanel' , component:AdminpanelComponent},
-  {path:'userprofile' , component:UserprofileComponent},
+  {path:'userprofile/:email' , component:UserprofileComponent},
   {path:'allproducts' , component:AllproductsComponent},
   {path:'categories' , component:CategoriesComponent},
   {path:'wishlist' , component:WishlistComponent},
   {path:'cart' , component:CartComponent},
-  {path:'register', component:RegisterComponent}
+  {path:'register', component:RegisterComponent},
+  {path:'adminRegister', component:AdminRegisterComponent},
+  {path:'adminlogout',component:AdminlogoutComponent}
 ];
 
 @NgModule({

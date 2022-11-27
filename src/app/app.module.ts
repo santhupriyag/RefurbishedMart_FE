@@ -4,7 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +19,10 @@ import { AllproductsComponent } from './components/allproducts/allproducts.compo
 import { CategoriesComponent } from './components/categories/categories.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LogoutComponent } from './components/logout/logout.component';
+import { AdminRegisterComponent } from './components/admin-register/admin-register.component';
+import { AdminlogoutComponent } from './components/adminlogout/adminlogout.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +37,19 @@ import { CartComponent } from './components/cart/cart.component';
     CategoriesComponent,
     WishlistComponent,
     CartComponent,
+    LogoutComponent,
+    AdminRegisterComponent,
+    AdminlogoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), FontAwesomeModule, // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
