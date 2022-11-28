@@ -14,20 +14,20 @@ export class ProductService {
     return this.http.get(`http://localhost:7075/RefurbishedMart/productcontroller/findAllProducts`);
   }
 
-  getProduct(id: string | any): Observable<any> {
-    return this.http.get(`http://localhost:9095/estore/productcontroller/product/${id}`);
+  getProduct(id: any): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/productcontroller/product/${id}`);
   }
 
-  updateProduct(id: number, value: any): Observable<Object> {
-    return this.http.put(`http://localhost:9095/estore/productcontroller/product/${id}`, value);
+  updateProduct(product: any): Observable<any> {
+    return this.http.put(`http://localhost:7075/RefurbishedMart/productcontroller/updateProduct`, product);
   }
 
-  deleteProduct(id: number): Observable<any> {
-    return this.http.delete(`http://localhost:9095/estore/productcontroller/products/${id}`, { responseType: 'text' });
+  deleteProduct(id: any): Observable<any> {
+    return this.http.delete(`http://localhost:7075/RefurbishedMart/productcontroller/deleteProduct/${id}`, { responseType: 'text' });
   }
 
-  newProduct(product: Object): Observable<Object> {
-    return this.http.post(`http://localhost:9095/estore/productcontroller/registerProduct`, product);
+  newProduct(product: any): Observable<Object> {
+    return this.http.post(`http://localhost:7075/RefurbishedMart/productcontroller/addProduct`, product);
   }
 
 }
