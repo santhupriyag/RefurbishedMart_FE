@@ -28,6 +28,9 @@
       <li class="nav-item">
         <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()"  style="margin-left: 1px;" class="clickme  bg-primary" routerLinkActive="active">My Profile</a>
       </li>
+      <li class="nav-item">
+        <a *ngIf="adminloginservice.isAdminLoggedIn()" (click)="Admincheck()"  style="margin-left: 5px;" class="clickme  bg-primary" routerLinkActive="active">My Profile</a>
+      </li>
 
       <!-- <li class="nav-item">
         <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="addproducts" class="clickme bg-primary" routerLinkActive="active" style="margin-left: 15px;">Add Product</a>
@@ -62,7 +65,7 @@
       </li>
 
       <li class="nav-item">
-        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="listproducts" style="margin-left:15px ;"    class="clickme  bg-primary" routerLinkActive="active">All Products</a>
+        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="allproducts" style="margin-left:15px ;"    class="clickme  bg-primary" routerLinkActive="active">All Products</a>
       </li>
      
         <a *ngIf="userloginService.isUserLoggedIn()" routerLink="cart" class="fa fa-shopping-cart" style="font-size:24px; margin-left:570px" routerLinkActive="active"></a>

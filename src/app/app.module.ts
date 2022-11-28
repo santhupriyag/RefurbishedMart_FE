@@ -23,6 +23,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LogoutComponent } from './components/logout/logout.component';
 import { AdminRegisterComponent } from './components/admin-register/admin-register.component';
 import { AdminlogoutComponent } from './components/adminlogout/adminlogout.component';
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AdminlogoutComponent } from './components/adminlogout/adminlogout.compo
     LogoutComponent,
     AdminRegisterComponent,
     AdminlogoutComponent,
+    AdminProfileComponent,
   ],
   imports: [
     BrowserModule,

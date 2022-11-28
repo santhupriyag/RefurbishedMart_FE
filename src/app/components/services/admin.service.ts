@@ -18,9 +18,19 @@ export class AdminService {
     return this.http.post(`http://localhost:7075/RefurbishedMart/admincontroller/registerUser`, admin);
   }
 
+  getAdmin(email: string): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/admincontroller/getAdminByMail/${email}`);
+  }
+
+  editProfile(user:any):Observable<any>
+  {
+    return this.http.post(`http://localhost:7075/RefurbishedMart/admincontroller/editProfile`,user)
+  }
+
   isAdminLoggedIn() {
     let admin = sessionStorage.getItem('aname')
     console.log(!(admin === null))
+    this.email = sessionStorage.getItem('aname')
     return !(admin === null)
   }
 

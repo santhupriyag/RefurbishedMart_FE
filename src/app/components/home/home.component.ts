@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  products:  any;
+  constructor(private productService: ProductService,  private router: Router) { }
   ngOnInit(): void {
+
+    this.products = this.productService.getProductsList();
+  }
+
+  route(){
+
+    this.router.navigate(['/login']);
   }
 
 }

@@ -23,6 +23,16 @@ export class UserService {
     return this.http.post(`http://localhost:7075/RefurbishedMart/customercontroller/userLogin`,user)
   }
 
+    
+  getUser(email: string): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/customercontroller/getUserByMail/${email}`);
+  }
+
+  editProfile(user:any):Observable<any>
+  {
+    return this.http.post(`http://localhost:7075/RefurbishedMart/customercontroller/editProfile`,user)
+  }
+
   isUserLoggedIn() {
 
     let user = sessionStorage.getItem('username')

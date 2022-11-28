@@ -12,7 +12,8 @@ import { UserprofileComponent } from './components/userprofile/userprofile.compo
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import{LogoutComponent} from './components/logout/logout.component'
 import{AdminRegisterComponent} from './components/admin-register/admin-register.component'
-import{AdminlogoutComponent} from './components/adminlogout/adminlogout.component'
+import{AdminlogoutComponent} from './components/adminlogout/adminlogout.component';
+import{AdminProfileComponent} from './components/admin-profile/admin-profile.component'
 const routes: Routes = [
   {path:'' , pathMatch:"full" , redirectTo:'home'},
   {path:'home' , component:HomeComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:'cart' , component:CartComponent},
   {path:'register', component:RegisterComponent},
   {path:'adminRegister', component:AdminRegisterComponent},
-  {path:'adminlogout',component:AdminlogoutComponent}
+  {path:'adminlogout',component:AdminlogoutComponent},
+  {path:'adminprofile/:email',component:AdminProfileComponent}
 ];
 
 @NgModule({

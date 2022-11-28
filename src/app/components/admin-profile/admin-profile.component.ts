@@ -1,28 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 import { ToastrService } from 'ngx-toastr';
+
 @Component({
-  selector: 'app-userprofile',
-  templateUrl: './userprofile.component.html',
-  styleUrls: ['./userprofile.component.css']
+  selector: 'app-admin-profile',
+  templateUrl: './admin-profile.component.html',
+  styleUrls: ['./admin-profile.component.css']
 })
-export class UserprofileComponent implements OnInit {
+export class AdminProfileComponent {
   email: any;
   user:  any;
   constructor(private route: ActivatedRoute,private router: Router,
-    private userservice:UserService,private toastr: ToastrService) { }
+    private adminservice:AdminService,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.email = this.route.snapshot.params['email'];
-    this.userservice.getUser(this.email)
+    this.adminservice.getAdmin(this.email)
     .subscribe(data => {
       console.log(data)
       this.user = data;
     }, error => console.log(error));
   }
   updateProfile(){
-    this.userservice.editProfile(this.user).subscribe((res:any) => {
+    this.adminservice.editProfile(this.user).subscribe((res:any) => {
        if('message' in res){
         this.toastr.success('', res.message);
        

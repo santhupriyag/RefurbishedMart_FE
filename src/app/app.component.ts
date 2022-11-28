@@ -28,5 +28,14 @@ export class AppComponent {
         this.router.navigate(['userprofile',this.userloginService.email]);
       }
     }
+
+    
+    Admincheck() {
+  
+      if(this.adminloginservice.isAdminLoggedIn()) {
+  
+        this.router.navigate(['adminprofile',this.adminloginservice.email]);
+      }
+    }
   
 }
