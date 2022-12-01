@@ -29,5 +29,8 @@ export class ProductService {
   newProduct(product: any): Observable<Object> {
     return this.http.post(`http://localhost:7075/RefurbishedMart/productcontroller/addProduct`, product);
   }
+  getProductBycategory(categoryid: any): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/productcontroller/getproductsbycategory/${categoryid}`);
+  }
 
 }

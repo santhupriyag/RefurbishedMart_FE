@@ -1,10 +1,13 @@
-<h1 class="text-center" style="color: #0fb9b4;">Products to Buy</h1>
-<!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for any product"> -->
+<h1 class="text-center" style="color: #0fb9b4;"></h1>
+<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search ">
+
+
+
 <section style="background-color: #eee;">
     <div class="container py-5">
-      <div class="row justify-content-center mb-3" *ngFor="let product of products | async">
+      <div class="row justify-content-center mb-3" *ngFor="let product of products">
         <div class="col-md-12 col-xl-10" >
-          <div class="card shadow-0 border rounded-3" id="cardbody">
+          <div class="card shadow-0 border rounded-3">
             <div class="card-body" >
               <div class="row" >
                 <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0" >
@@ -19,7 +22,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h5>{{product.prodname}}</h5>
+                  <h5>{{product.name}}</h5>
                   <div class="d-flex flex-row">
                     <!-- <div class="text-danger mb-1 me-2">
                       <i class="fa fa-star"></i>
@@ -27,15 +30,20 @@
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                     </div> -->
-                    <span>Brand :{{product.brand}}</span>
+                    <span>Brand :  {{product.brand}}</span>
                     <br>
                   </div>
                   <div class="mt-1 mb-0 text-muted small">
                     <div style="height: 10px;"></div>
                     <span class="text-primary"> • </span>
-                    <span>Category : {{product.category.categoryname}}<br /></span>
+                    <span>Category : {{product.category}}<br /></span>
                   </div>
-
+                  <div style="height: 10px;"></div>
+                  <div class="mb-2 text-muted small">
+                   
+                    <span class="text-primary"> • </span>
+                    <span>Product Made in : {{product.madein}}<br /></span>
+                  </div>
                   <div style="height: 10px;"></div>
                   <p class="text-truncate mb-4 mb-md-0">
                    Product Price : ₹ {{product.price}}
@@ -49,8 +57,8 @@
                   <h6 class="text-success">Free shipping</h6>
                   
                   <div class="d-flex flex-column mt-4">
-                    <button class="btn btn-primary btn-sm" (click)="gotocart(product.prodid)" type="button">Add to cart</button>
-                    <button class="btn btn-outline-primary btn-sm mt-2" (click)="gotowishlist(product.prodid)" type="button">
+                    <button class="btn btn-primary btn-sm" (click)="gotocart(product.id)" type="button">Add to cart</button>
+                    <button class="btn btn-outline-primary btn-sm mt-2" (click)="gotowishlist(product.id)" type="button">
                       Add to wishlist
                     </button>
                   </div>

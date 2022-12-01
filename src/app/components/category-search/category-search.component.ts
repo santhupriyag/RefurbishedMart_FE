@@ -1,26 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import {CartService} from '../services/cart.service';
 import{WishlistService} from '../services/wishlist.service'
 
-
 @Component({
-  selector: 'app-allproducts',
-  templateUrl: './allproducts.component.html',
-  styleUrls: ['./allproducts.component.css']
+  selector: 'app-category-search',
+  templateUrl: './category-search.component.html',
+  styleUrls: ['./category-search.component.css']
 })
-export class AllproductsComponent implements OnInit {
-  
+export class CategorySearchComponent {
   products: any;
   product: any;
   searchText:any;
+id:any;
 
-  constructor(private productService: ProductService,  private router: Router,private cartservice:CartService,private wishlistService:WishlistService) { }
+  constructor(private productService: ProductService,  private router: Router,private cartservice:CartService,private wishlistService:WishlistService,private route: ActivatedRoute) {
+ 
+  
+   }
+
 
   ngOnInit(): void {
-    this.products = this.productService.getProductsList();
-    console.log(this.products)
+
+    this.route.params.subscribe(routeParams => {
+     this.loadProducts(routeParams['id']);
+    });
+  // this. id = this.route.snapshot.params['id'];
+
+
+  }
+
+  loadProducts(cat :any)
+  {
+    this.productService.getProductBycategory(cat).subscribe(data => {
+      this.products = data
+      console.log(this.products);
+    }
+  );
   }
   gotocart(id : any) {
     console.log(id);
@@ -85,4 +102,6 @@ let cart={
     this.router.navigate(['wishlist']);
   }
   
+
+ 
 }

@@ -215,3 +215,19 @@ ol, ul {
     padding: 0;
 }
 
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+.navbar-brand1
+{
+    font-family: Arial, Helvetica, sans-serif;
+  color:grey;
+  font-size: 14px;
+  margin: 0px;
+  text-decoration: none;
+
+}
+

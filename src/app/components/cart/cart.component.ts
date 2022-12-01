@@ -14,13 +14,14 @@ export class CartComponent implements OnInit {
   public products : any = [];
   public grandTotal : number = 0;
   response:any;
+  email:any;
 
   constructor(private cartService : CartService,private router:Router,private http:HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
 
-    let email = sessionStorage.getItem('username')
-    this.cartService.getProductsList(email).subscribe(data => {
+    this.email = sessionStorage.getItem('username')
+    this.cartService.getProductsList(this.email).subscribe(data => {
       this.products = data
       console.log(this.products);
     }
@@ -65,12 +66,17 @@ export class CartComponent implements OnInit {
   }
   
   checkout() {
-
+let order={
+  "userid": this.email,
+  "tp":this.TotalCost(),
+  "prodcts":this.products
+}
   // this.router.navigate(["payment"]);
   //this.cartService.deleteallcartitems();
   // this.http.delete('http://localhost:9095/estore/cartcontroller/deleteproducts')
   // .subscribe(data => '');
-    this.router.navigate(["payment"]);
+    this.router.navigate(["checkout",JSON.stringify(order)]);
+   // this.router.navigate(['/reserve',this.email]‌​);
   }
 
   TotalCost() {

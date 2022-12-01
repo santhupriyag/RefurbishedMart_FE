@@ -24,7 +24,19 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { AdminRegisterComponent } from './components/admin-register/admin-register.component';
 import { AdminlogoutComponent } from './components/adminlogout/adminlogout.component';
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
-
+import { AddproductsComponent } from './components/addproducts/addproducts.component';
+import { ListofproductsComponent } from './components/listofproducts/listofproducts.component';
+import { AdminupdateComponent } from './components/adminupdate/adminupdate.component';
+import { AdminproductdetailsComponent } from './components/adminproductdetails/adminproductdetails.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+import { CategorySearchComponent } from './components/category-search/category-search.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DisplayComponent } from './components/display/display.component';
+import { UserOrdersComponent } from './components/user-orders/user-orders.component';
+import { UserFeedbackComponent } from './components/user-feedback/user-feedback.component';
+import { UserSupportComponent } from './components/user-support/user-support.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +54,19 @@ import { AdminProfileComponent } from './components/admin-profile/admin-profile.
     AdminRegisterComponent,
     AdminlogoutComponent,
     AdminProfileComponent,
+    AddproductsComponent,
+    ListofproductsComponent,
+    AdminupdateComponent,
+    AdminproductdetailsComponent,
+    AddCategoryComponent,
+    ListCategoryComponent,
+    UpdateCategoryComponent,
+    CategorySearchComponent,
+    CheckoutComponent,
+    DisplayComponent,
+    UserOrdersComponent,
+    UserFeedbackComponent,
+    UserSupportComponent,
   ],
   imports: [
     BrowserModule,

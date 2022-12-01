@@ -1,0 +1,18 @@
+<h3 style="color: #0fb9b4; text-align: center;">Create Product</h3>
+<div class="d-flex p-5 m-4 justify-content-center">
+    <br>
+    <div  style="width: 400px;" >
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate>
+            <div class="form-group">
+                <label for="name">Category Name</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="category.categoryname" name="name">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <!-- <div [hidden]="!submitted">
+        <h4>You submitted successfully!</h4>
+    </div> -->
+</div>

@@ -13,96 +13,115 @@
          </div> 
     </div> 
   </section>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse"  aria-controls="navbarSupportedContent" aria-expanded="false" >
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto">
-      <li class="nav-item active">
-        <a  *ngIf="!userloginService.isUserLoggedIn()" class="nav-link" href="#" style="font-weight:bold;color: rgb(1, 1, 1);"routerLink="home" class="clickme info" routerLinkActive="active">Home</a>
-      </li>
- 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light static-top"  style="background-color:ghostwhite;">
+  <div class="container">
+  
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item navbar-brand1 topnav">
+          <a *ngIf="!userloginService.isUserLoggedIn()" class="nav-link active" aria-current="page" routerLink="home"  routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()" class="nav-link " routerLinkActive="active">Profile</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" (click)="Admincheck()"  class="nav-link" routerLinkActive="active">Profile</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="addproducts" class="nav-link" routerLinkActive="active">Add Product</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="addcategory" class="nav-link" routerLinkActive="active">Add Category</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="listofproductsadmin" class="nav-link" routerLinkActive="active">Product List</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="listcategory" class="nav-link" routerLinkActive="active" >Category List</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminpanel" class="nav-link" routerLinkActive="active" >Users</a>       
+         </li>
+         <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminfeedback" class="nav-link" routerLinkActive="active" >Feed Back</a>
+        </li>
+         
+         <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminsupport" class="nav-link" routerLinkActive="active" >Support</a>
+        </li>
+            
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="salereport"class="nav-link" routerLinkActive="active" >Sale Report</a>
 
-      <li class="nav-item">
-        <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()"  style="margin-left: 1px;" class="clickme  bg-primary" routerLinkActive="active">My Profile</a>
-      </li>
-      <li class="nav-item">
-        <a *ngIf="adminloginservice.isAdminLoggedIn()" (click)="Admincheck()"  style="margin-left: 5px;" class="clickme  bg-primary" routerLinkActive="active">My Profile</a>
-      </li>
+        </li>
+            
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="revenuereport" class="nav-link" routerLinkActive="active" >Revenue Report</a>
+        </li>
+            
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="wishlist" class="nav-link"  routerLinkActive="active">Wishlist</a>
 
-      <!-- <li class="nav-item">
-        <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="addproducts" class="clickme bg-primary" routerLinkActive="active" style="margin-left: 15px;">Add Product</a>
-      </li> -->
+        </li>
+        
+            <li class="nav-item dropdown navbar-brand1" >
+              <a *ngIf="userloginService.isUserLoggedIn()" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" >
+             <a class="dropdown-item" *ngFor="let category of getcategorys"  (click)='csearch(category)'>  {{ category.categoryname }}</a>
+            <!-- <a class="dropdown-item" href="#" routerLink="homeappliances">Home Appliances</a>
+            <a class="dropdown-item" href="#" routerLink="gadgets">Gadgets</a>
+            <a class="dropdown-item" href="#" routerLink="Mobiles">Mobiles</a>
+            <a class="dropdown-item" href="#" routerLink="Electronics">Electronics</a>
+            <a class="dropdown-item" href="#" routerLink="clothes">Clothes</a> -->
+            </ul>
+        </li>
+            
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()" class="nav-link" routerLink="allproducts"  routerLinkActive="active">Products</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="userfeedback" class="nav-link" routerLinkActive="active" >Feedback</a>
+        </li>
+         
+         <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="usersupport" class="nav-link" routerLinkActive="active" >Support</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="userorders" class="nav-link" routerLinkActive="active" >Orders</a>
+        </li>
+        <li class="nav-item navbar-brand1">
+        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="cart" class="fa fa-shopping-cart"  style="margin-left:434px ;" routerLinkActive="active"></a>
+</li>
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="userloginService.isUserLoggedIn()"    routerLink="logout" class="nav-link"  style="margin-left:13px;color: red;    font-size: 17px;
+          text-decoration: none;"routerLinkActive="active">LogOut</a>
 
-      <!-- <li class="nav-item">
-        <a *ngIf="retailerloginservice.isRetailerLoggedIn()" routerLink="productlist" class="clickme  bg-primary" routerLinkActive="active" style="margin-left: 15px;">Product List</a>
-      </li> -->
+        </li>
+        
+        <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()"   routerLink="adminlogout" class="nav-link"  routerLinkActive="active">LogOut</a>
 
-      <!-- <li class="nav-item">
-        <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="retailerslist" class="clickme  bg-primary" routerLinkActive="active" style="margin-left: 15px;">Retailers List</a>
-      </li> -->
-
-      <li class="nav-item">
-        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="wishlist" style="margin-left:14px ;"    class="clickme  bg-primary" routerLinkActive="active">Wishlist</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-        <button type="button" class="btn info dropdown-toggle" data-bs-toggle="dropdown" style="font-weight:bold;color: black;margin-left:29px"
-          *ngIf="userloginService.isUserLoggedIn()" >Category
-          </button>
-          <ul class="dropdown-menu" style="margin-left: 18px;">
-           <a class="dropdown-item" href="#" routerLink="sports">Sports</a>
-          <a class="dropdown-item" href="#" routerLink="homeappliances">Home Appliances</a>
-          <a class="dropdown-item" href="#" routerLink="gadgets">Gadgets</a>
-          <a class="dropdown-item" href="#" routerLink="Mobiles">Mobiles</a>
-          <a class="dropdown-item" href="#" routerLink="Electronics">Electronics</a>
-          <a class="dropdown-item" href="#" routerLink="clothes">Clothes</a>
-          </ul>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="allproducts" style="margin-left:15px ;"    class="clickme  bg-primary" routerLinkActive="active">All Products</a>
-      </li>
+        </li>
      
-        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="cart" class="fa fa-shopping-cart" style="font-size:24px; margin-left:570px" routerLinkActive="active"></a>
-   
-
-      <li class="nav-item">
-        <a *ngIf="userloginService.isUserLoggedIn()"  style="margin-left:41px ;"  routerLink="logout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a>
-      </li>
-
-      <!-- <li class="nav-item">
-        <a *ngIf="retailerloginservice.isRetailerLoggedIn()"  style="margin-left:553px ;"  routerLink="retailerlogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a>
-      </li> -->
-
-      <li class="nav-item">
-        <a *ngIf="adminloginservice.isAdminLoggedIn()"  style="margin-left:553px ;" routerLink="adminlogout" class="clickme info bg-danger" routerLinkActive="active">LogOut</a>
-      </li>
-
-      
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-          <button type="button" class="btn info dropdown-toggle" data-bs-toggle="dropdown" style="font-weight:bold;color: black;margin-left: 686px;"
-          *ngIf="!userloginService.isUserLoggedIn() && !adminloginservice.isAdminLoggedIn() " >Login
-          </button>
-          <ul class="dropdown-menu" style="margin-left: 686px;">
+        <li class="nav-item dropdown navbar-brand1" style="margin-left: 10px;">
+          <a *ngIf="!userloginService.isUserLoggedIn() && !adminloginservice.isAdminLoggedIn() " class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" >
             <a class="dropdown-item" routerLink="login">User Login</a>
- 
+  
             <a class="dropdown-item" routerLink="adminlogin">Admin Login</a>
-
           </ul>
-        </div>
-      </li>
-
-    </ul>
-
+        </li>
+       
+      </ul>
+    </div>
   </div>
 </nav>
-
 
 <div class="container">
   <br>
