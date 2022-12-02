@@ -1,24 +1,35 @@
-<table class="table table-info">
-    <thead class="table-dark">
-    <tr >
-      <th scope="col">#</th>
-      <th scope="col">Id</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">city</th>
-    <th scope="col">operation</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- <tr *ngFor="let retailer of retailers | async;index as i">
-      <th scope="row">{{ i + 1 }}</th>
-     <td>{{ retailer.id }}</td>
-              <td>{{ retailer.fname }}</td>
-              <td>{{ retailer.lname}}</td>
-              <td>{{ retailer.email}}</td>
-              <td>{{ retailer.city }}</td>
-              <td><button (click)="deleteretailer(retailer.id)" class="btn btn-danger">Delete</button>
-    </tr> -->
-    </tbody>
-  </table>
+
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-info">
+        <thead class="table-dark">
+          <tr>
+            <th>User Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>UserName</th>
+            <th>Phone No</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of Users">
+            <td>{{ user.uid }}</td>
+            <td>{{user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{user.contact.email }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.contact.phno}}</td>
+            <td>{{ user.status }}</td>
+            <td><button (click)="deleteUser(user.uid)" class="btn btn-danger">Delete</button>
+              <button  (click)="updateUser(user.contact.email)" class="btn btn-secondary" style="margin-left: 10px">Update</button>
+                
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>

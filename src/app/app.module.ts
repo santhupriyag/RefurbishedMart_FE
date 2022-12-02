@@ -37,6 +37,11 @@ import { DisplayComponent } from './components/display/display.component';
 import { UserOrdersComponent } from './components/user-orders/user-orders.component';
 import { UserFeedbackComponent } from './components/user-feedback/user-feedback.component';
 import { UserSupportComponent } from './components/user-support/user-support.component';
+import { AdminUserUpdateComponent } from './components/admin-user-update/admin-user-update.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { AdminOrdersUpdateComponent } from './components/admin-orders-update/admin-orders-update.component';
+import { UserForgotPasswordComponent } from './components/user-forgot-password/user-forgot-password.component';
+import { AdminForgotPasswordComponent } from './components/admin-forgot-password/admin-forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +72,11 @@ import { UserSupportComponent } from './components/user-support/user-support.com
     UserOrdersComponent,
     UserFeedbackComponent,
     UserSupportComponent,
+    AdminUserUpdateComponent,
+    AdminOrdersComponent,
+    AdminOrdersUpdateComponent,
+    UserForgotPasswordComponent,
+    AdminForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

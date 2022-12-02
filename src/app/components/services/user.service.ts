@@ -33,6 +33,11 @@ export class UserService {
     return this.http.post(`http://localhost:7075/RefurbishedMart/customercontroller/editProfile`,user)
   }
 
+  resetPassword(user:any):Observable<any>
+  {
+    return this.http.post(`http://localhost:7075/RefurbishedMart/customercontroller/forgotpassword`,user)
+  }
+
   isUserLoggedIn() {
 
     let user = sessionStorage.getItem('username')

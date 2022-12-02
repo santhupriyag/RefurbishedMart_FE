@@ -21,7 +21,7 @@
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item navbar-brand1 topnav">
-          <a *ngIf="!userloginService.isUserLoggedIn()" class="nav-link active" aria-current="page" routerLink="home"  routerLinkActive="active">Home</a>
+          <a *ngIf="!userloginService.isUserLoggedIn() && !adminloginservice.isAdminLoggedIn()" class="nav-link active" aria-current="page" routerLink="home"  routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item navbar-brand1">
           <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()" class="nav-link " routerLinkActive="active">Profile</a>
@@ -44,6 +44,11 @@
         <li class="nav-item navbar-brand1">
           <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminpanel" class="nav-link" routerLinkActive="active" >Users</a>       
          </li>
+
+         <li class="nav-item navbar-brand1">
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminorders" class="nav-link" routerLinkActive="active" >Orders</a>
+        </li>
+
          <li class="nav-item navbar-brand1">
           <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminfeedback" class="nav-link" routerLinkActive="active" >Feed Back</a>
         </li>

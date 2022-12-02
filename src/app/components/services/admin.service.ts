@@ -21,7 +21,13 @@ export class AdminService {
   getAdmin(email: string): Observable<any> {
     return this.http.get(`http://localhost:7075/RefurbishedMart/admincontroller/getAdminByMail/${email}`);
   }
-
+  
+  deleteUserByid(uid: string): Observable<any> {
+    return this.http.delete(`http://localhost:7075/RefurbishedMart/admincontroller/deleteUserByid/${uid}`);
+  }
+  getAllUsers(): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/admincontroller/getAllUsers`);
+  }
   editProfile(user:any):Observable<any>
   {
     return this.http.post(`http://localhost:7075/RefurbishedMart/admincontroller/editProfile`,user)
@@ -33,6 +39,7 @@ export class AdminService {
     this.email = sessionStorage.getItem('aname')
     return !(admin === null)
   }
+
 
   logOut() {
     sessionStorage.removeItem('aname')

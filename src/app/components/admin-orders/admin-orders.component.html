@@ -1,0 +1,37 @@
+
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-info">
+        <thead class="table-dark">
+          <tr>
+            <th>Order Id</th>
+            <th>Email</th>
+            <th>Total Amount</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zipcode</th>
+            <th>Order Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of Orders">
+            <td>{{order.id}}</td>
+            <td>{{order.userMail}}</td>
+            <td>{{order.totalprice}}</td>
+            <td>{{order.street}}</td>
+            <td>{{order.city}}</td>
+            <td>{{order.state}}</td>
+            <td>{{order.zipCode}}</td>
+            <td>{{order.status}}</td>
+            <td>
+              <button  (click)="updateorder(order.id)" class="btn btn-info " style="margin-left: 10px">Update</button>
+                
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>

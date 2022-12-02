@@ -17,4 +17,15 @@ export class OrdersService {
   getUserOrders(email: string): Observable<any> {
     return this.http.get(`http://localhost:7075/RefurbishedMart/ordercontroller/getUserOrders/${email}`);
   }
+
+  getAllOrders(): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/ordercontroller/getAllOrders`);
+  }
+  getOrderByid(id: any): Observable<any> {
+    return this.http.get(`http://localhost:7075/RefurbishedMart/ordercontroller/getOrderById/${id}`);
+  }
+
+  changeOrderStatus(order: any): Observable<Object> {
+    return this.http.post(`http://localhost:7075/RefurbishedMart/ordercontroller/changeOrderStatus`, order);
+  }
 }

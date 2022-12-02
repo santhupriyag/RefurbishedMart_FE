@@ -1,0 +1,26 @@
+<h3>Update Product</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div class="form-group">
+        <label for="name">Order Id</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="order.id" name="id" readonly>
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Email</label>
+          <input type="text" class="form-control" id="brand" required [(ngModel)]="order.userMail" name="brand">
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Total Amount</label>
+          <input type="text" class="form-control" id="madein" required [(ngModel)]="order.totalprice" name="madein">
+        </div>
+        
+        <div class="form-group">
+          <label for="name">Order Status</label>
+          <input type="text" class="form-control" id="status" required [(ngModel)]="order.status" name="status">
+        </div>
+        
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
