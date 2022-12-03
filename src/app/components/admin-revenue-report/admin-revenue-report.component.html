@@ -1,0 +1,29 @@
+
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-info">
+        <thead class="table-dark">
+          <tr>
+            <th> Id</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Toatl Amount</th>
+      
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let revenue of Revenue">
+            <td>{{revenue.id}}</td>
+            <td>{{revenue.name}}</td>
+            <td>{{revenue.quantity}}</td>
+            <td>{{revenue.total}}</td>
+   
+    
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+

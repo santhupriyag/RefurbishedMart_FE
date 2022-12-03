@@ -38,10 +38,14 @@ import { UserOrdersComponent } from './components/user-orders/user-orders.compon
 import { UserFeedbackComponent } from './components/user-feedback/user-feedback.component';
 import { UserSupportComponent } from './components/user-support/user-support.component';
 import { AdminUserUpdateComponent } from './components/admin-user-update/admin-user-update.component';
-import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component'; 
 import { AdminOrdersUpdateComponent } from './components/admin-orders-update/admin-orders-update.component';
 import { UserForgotPasswordComponent } from './components/user-forgot-password/user-forgot-password.component';
 import { AdminForgotPasswordComponent } from './components/admin-forgot-password/admin-forgot-password.component';
+import { AdminSupportComponent } from './components/admin-support/admin-support.component';
+import { AdminFeedbackComponent } from './components/admin-feedback/admin-feedback.component';
+import { AdminRevenueReportComponent } from './components/admin-revenue-report/admin-revenue-report.component';
+import { AdminSaleReportComponent } from './components/admin-sale-report/admin-sale-report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,6 +81,10 @@ import { AdminForgotPasswordComponent } from './components/admin-forgot-password
     AdminOrdersUpdateComponent,
     UserForgotPasswordComponent,
     AdminForgotPasswordComponent,
+    AdminSupportComponent,
+    AdminFeedbackComponent,
+    AdminRevenueReportComponent,
+    AdminSaleReportComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-info">
+        <thead class="table-dark">
+          <tr>
+            <th> Id</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Sale Count</th>
+      
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sale of Sale">
+            <td>{{sale.id}}</td>
+            <td>{{sale.name}}</td>
+            <td>{{sale.des}}</td>
+            <td>{{sale.quantity}}</td>
+   
+    
+          </tr>
+        </tbody>
+      </table>
+
+      
+
+    </div>
+

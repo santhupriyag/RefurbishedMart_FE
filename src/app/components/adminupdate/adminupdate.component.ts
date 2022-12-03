@@ -50,5 +50,7 @@ export class AdminupdateComponent {
       window.location.reload();
     });
   }
-
+  list(){
+    this.router.navigate(['listofproductsadmin']);
+  }
 }

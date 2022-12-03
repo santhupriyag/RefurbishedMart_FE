@@ -51,6 +51,8 @@ export class AdminUserUpdateComponent {
       window.location.reload();
     });
   }
-
+  list(){
+    this.router.navigate(['adminpanel']);
+  }
 
 }

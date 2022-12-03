@@ -1,0 +1,30 @@
+
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-info">
+        <thead class="table-dark">
+          <tr>
+            <th>Feedback Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Rating</th>
+            <th>FeedBack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feedback of Feedback">
+            <td>{{feedback.id}}</td>
+            <td>{{feedback.firstname}}</td>
+            <td>{{feedback.lastname}}</td>
+            <td>{{feedback.email}}</td>
+            <td>{{feedback.rating}}</td>
+            <td>{{feedback.feedback}}</td>
+    
+          </tr>
+        </tbody>
+      </table>
+    </div>
+

@@ -28,10 +28,14 @@ import { UserOrdersComponent } from './components/user-orders/user-orders.compon
 import { UserFeedbackComponent } from './components/user-feedback/user-feedback.component';
 import { UserSupportComponent } from './components/user-support/user-support.component';
 import { AdminUserUpdateComponent } from './components/admin-user-update/admin-user-update.component';
-import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component'; 
 import { AdminOrdersUpdateComponent } from './components/admin-orders-update/admin-orders-update.component';
 import { UserForgotPasswordComponent } from './components/user-forgot-password/user-forgot-password.component';
 import { AdminForgotPasswordComponent } from './components/admin-forgot-password/admin-forgot-password.component';
+import { AdminSupportComponent } from './components/admin-support/admin-support.component';
+import { AdminFeedbackComponent } from './components/admin-feedback/admin-feedback.component';
+import { AdminRevenueReportComponent } from './components/admin-revenue-report/admin-revenue-report.component';
+import { AdminSaleReportComponent } from './components/admin-sale-report/admin-sale-report.component';
 //import{}
 const routes: Routes = [
   {path:'' , pathMatch:"full" , redirectTo:'home'},
@@ -67,7 +71,11 @@ const routes: Routes = [
   {path:"adminorders",component:AdminOrdersComponent},
   {path:"adminorderupdate/:id",component:AdminOrdersUpdateComponent},
   {path:"userforgot",component:UserForgotPasswordComponent},
-  {path:"adminforgot",component:AdminForgotPasswordComponent}
+  {path:"adminforgot",component:AdminForgotPasswordComponent},
+  {path:"adminsupport",component:AdminSupportComponent},
+  {path:"adminfeedback",component:AdminFeedbackComponent},
+  {path:"adminsale",component:AdminSaleReportComponent},
+  {path:"adminrevenue",component:AdminRevenueReportComponent}
 ];
 
 @NgModule({

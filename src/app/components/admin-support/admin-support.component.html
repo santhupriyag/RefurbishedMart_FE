@@ -1,0 +1,31 @@
+
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-info">
+        <thead class="table-dark">
+          <tr>
+            <th>Feedback Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Issue</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let support of Support">
+            <td>{{support.id}}</td>
+            <td>{{support.firstname}}</td>
+            <td>{{support.lastname}}</td>
+            <td>{{support.email}}</td>
+            <td>{{support.issue}}</td>
+            <td>{{support.description}}</td>
+    
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
