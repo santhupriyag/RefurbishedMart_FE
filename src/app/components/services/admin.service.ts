@@ -32,6 +32,10 @@ export class AdminService {
   {
     return this.http.post(`http://localhost:7075/RefurbishedMart/admincontroller/editProfile`,user)
   }
+  resetPassword(user:any):Observable<any>
+  {
+    return this.http.post(`http://localhost:7075/RefurbishedMart/admincontroller/forgotpassword`,user)
+  }
 
   isAdminLoggedIn() {
     let admin = sessionStorage.getItem('aname')

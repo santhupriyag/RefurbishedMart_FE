@@ -16,10 +16,22 @@
           <input type="text" class="form-control" id="madein" required [(ngModel)]="order.totalprice" name="madein">
         </div>
         
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="name">Order Status</label>
           <input type="text" class="form-control" id="status" required [(ngModel)]="order.status" name="status">
-        </div>
+        </div> -->
+          <div class="form-group">
+              <label for="form_need">Order Status</label>
+              <select id="form_need" name="need" class="form-control" [(ngModel)]="order.status"  required="required" >
+                  <option value="" selected disabled>--Select Your Rating--</option>
+                  <option >Approved</option>
+                  <option >Return Accepted </option>
+                  <option >Rejected</option>
+                  <option >Shipping</option>
+              </select>
+  
+          </div>
+    
         
     <button type="submit" class="btn btn-success">Submit</button>
   </form>

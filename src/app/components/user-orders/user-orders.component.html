@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<!-- <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
 <div class="container bootdey">
     <div class="panel panel-default panel-order">
         <div class="panel-heading">
@@ -16,9 +16,6 @@
                             <span><strong>Order Id</strong>: {{order.id}}</span> <br>
                             Quantity : {{order.id}}<br> 
                             cost: ${{order.totalprice}}<br />
-                            <!-- <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                            <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
-                            <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a> -->
                         </div>
                         <div class="col-md-12">order made on: 06/20/2014 by <a href="#">{{order.userMail}}</a></div>
                     </div>
@@ -27,4 +24,47 @@
         </div>
        
     </div>
+</div> -->
+
+
+<div class="panel-heading">
+
+</div>
+<div class="panel-body">
+  <table class="table table-info">
+    <thead class="table-dark">
+      <tr>
+        <th>Order Id</th>
+        <th>Email</th>
+        <th>Total Amount</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zipcode</th>
+        <th>Order Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{order.id}}</td>
+        <td>{{order.userMail}}</td>
+        <td>{{order.totalprice}}</td>
+        <td>{{order.street}}</td>
+        <td>{{order.city}}</td>
+        <td>{{order.state}}</td>
+        <td>{{order.zipCode}}</td>
+        <td>{{order.status}}</td>   
+        <td>
+          <div *ngIf="order.status!='Return' && order.status!='Cancelled' && order.status!='Return Accepted'&& order.status!='Approved' && order.status!='Shipping' && order.status!='Rejected'">
+            <button  (click)="Return(order.id)" class="btn btn-primary " style="margin-left: 10px">Return</button>
+          </div>
+      
+          <div *ngIf="order.status!='Return'&& order.status!='Cancelled' && order.status!='Return Accepted'&& order.status!='Approved' && order.status!='Shipping' && order.status!='Rejected'" >
+            <button  (click)="Cancel(order.id)" class="btn btn-danger " style="margin-left: 10px;margin-top: 3px;">Cancel</button>
+            </div>
+        </td> 
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -24,50 +24,50 @@
           <a *ngIf="!userloginService.isUserLoggedIn() && !adminloginservice.isAdminLoggedIn()" class="nav-link active" aria-current="page" routerLink="home"  routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()" class="nav-link " routerLinkActive="active">Profile</a>
+          <a *ngIf="userloginService.isUserLoggedIn()" (click)="check()" class="nav-link " style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Profile</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" (click)="Admincheck()"  class="nav-link" routerLinkActive="active">Profile</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" (click)="Admincheck()"  class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Profile</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="addproducts" class="nav-link" routerLinkActive="active">Add Product</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="addproducts" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Add Product</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="addcategory" class="nav-link" routerLinkActive="active">Add Category</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="addcategory" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Add Category</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="listofproductsadmin" class="nav-link" routerLinkActive="active">Product List</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="listofproductsadmin" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Product List</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="listcategory" class="nav-link" routerLinkActive="active" >Category List</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="listcategory" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Category List</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminpanel" class="nav-link" routerLinkActive="active" >Users</a>       
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminpanel" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Users</a>       
          </li>
 
          <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminorders" class="nav-link" routerLinkActive="active" >Orders</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminorders" class="nav-link"  style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Orders</a>
         </li>
 
          <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminfeedback" class="nav-link" routerLinkActive="active" >Feed Back</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminfeedback" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Feed Back</a>
         </li>
          
          <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminsupport" class="nav-link" routerLinkActive="active" >Support</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminsupport" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Support</a>
         </li>
             
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminsale"class="nav-link" routerLinkActive="active" >Sale Report</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminsale"class="nav-link"  style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Sale Report</a>
 
         </li>
             
         <li class="nav-item navbar-brand1">
-          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminrevenue" class="nav-link" routerLinkActive="active" >Revenue Report</a>
+          <a *ngIf="adminloginservice.isAdminLoggedIn()" routerLink="adminrevenue" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Revenue Report</a>
         </li>
             
         <li class="nav-item navbar-brand1">
-          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="wishlist" class="nav-link"  routerLinkActive="active">Wishlist</a>
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="wishlist" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Wishlist</a>
 
         </li>
         
@@ -86,17 +86,17 @@
         </li>
             
         <li class="nav-item navbar-brand1">
-          <a *ngIf="userloginService.isUserLoggedIn()" class="nav-link" routerLink="allproducts"  routerLinkActive="active">Products</a>
+          <a *ngIf="userloginService.isUserLoggedIn()" class="nav-link" routerLink="allproducts" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active">Products</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="userfeedback" class="nav-link" routerLinkActive="active" >Feedback</a>
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="userfeedback" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Feedback</a>
         </li>
          
          <li class="nav-item navbar-brand1">
-          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="usersupport" class="nav-link" routerLinkActive="active" >Support</a>
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="usersupport" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Support</a>
         </li>
         <li class="nav-item navbar-brand1">
-          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="userorders" class="nav-link" routerLinkActive="active" >Orders</a>
+          <a *ngIf="userloginService.isUserLoggedIn()" routerLink="userorders" class="nav-link" style="text-decoration: none;"   onMouseOut="this.style.color='#00F'" onMouseOver="this.style.color='red'" routerLinkActive="active" >Orders</a>
         </li>
         <li class="nav-item navbar-brand1">
         <a *ngIf="userloginService.isUserLoggedIn()" routerLink="cart" class="fa fa-shopping-cart"  style="margin-left:434px ;" routerLinkActive="active"></a>

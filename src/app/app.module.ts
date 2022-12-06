@@ -46,6 +46,8 @@ import { AdminSupportComponent } from './components/admin-support/admin-support.
 import { AdminFeedbackComponent } from './components/admin-feedback/admin-feedback.component';
 import { AdminRevenueReportComponent } from './components/admin-revenue-report/admin-revenue-report.component';
 import { AdminSaleReportComponent } from './components/admin-sale-report/admin-sale-report.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,6 +93,7 @@ import { AdminSaleReportComponent } from './components/admin-sale-report/admin-s
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    Ng2SearchPipeModule,
     ReactiveFormsModule,
     CommonModule,
     BrowserAnimationsModule, // required animations module
@@ -100,3 +103,4 @@ import { AdminSaleReportComponent } from './components/admin-sale-report/admin-s
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

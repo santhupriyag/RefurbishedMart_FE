@@ -25,6 +25,8 @@
                                       <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"  name="password" required>
                                     </div>
                                     <button type="submit" (click)="checkLogin(adminname)" class="btn btn-theme">Login</button>
+                                    <p class="text-muted text-center mt-3 mb-0">Trouble logging in?  <a routerLink="/adminforgot" routerLinkActive="active" class="text-primary ml-1">Forgot Password</a></p>
+
                                     <!-- <a href="#l" class="forgot-link float-right text-primary">Forgot password?</a> -->
                                 </form>
                             </div>
